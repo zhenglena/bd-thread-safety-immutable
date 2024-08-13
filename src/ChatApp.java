@@ -35,11 +35,11 @@ public class ChatApp {
 
         // There was a misspelling in our message so we're changing it and resending it!
         // This shouldn't replace our original message, it should just send a new one.
-        messageContent.message = "Welcome to the group!";
+        ChatMessageContent newMessageContent = new ChatMessageContent(myUser, "Welcome to the group!", messageContent.getCreationDate());
 
         // Because all the threads are referencing the same `ChatMessageContent` object,
         // any threads that haven't executed yet will send the modified message.
-        //messageDistributor.sendChatMessage(chatGroup, messageContent);
+        messageDistributor.sendChatMessage(chatGroup, newMessageContent);
 
     }
 }

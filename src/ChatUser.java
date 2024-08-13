@@ -1,8 +1,8 @@
 
 
-public class ChatUser {
-    public String username;
-    public String userId;
+public final class ChatUser {
+    public final String username;
+    public final String userId;
 
     /**
      * Constructor for Chat user. Class used to tag messages in the chat system.

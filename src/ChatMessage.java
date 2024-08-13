@@ -1,8 +1,8 @@
 
 
-public class ChatMessage implements Runnable {
-    public ChatUser recipient;
-    public ChatMessageContent messageContent;
+public final class ChatMessage implements Runnable {
+    private final ChatUser recipient;
+    private final ChatMessageContent messageContent;
 
     /**
      *
@@ -29,6 +29,6 @@ public class ChatMessage implements Runnable {
         // here's where we send the message to our recipient.
         System.out.println("Message: '" + this.messageContent.getMessage() + "' has been sent to user " +
                 this.getRecipient().getUsername() + " by " + this.messageContent.getSender().getUsername() + " on " +
-                this.messageContent.getCreationDate().toString());
+                this.messageContent.getCreationDate());
     }
 }
